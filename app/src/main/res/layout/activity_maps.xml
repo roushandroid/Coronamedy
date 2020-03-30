@@ -1,0 +1,78 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/location_search"
+            android:layout_width="314dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:hint="Place name"
+            android:textColorHint="@android:color/darker_gray"/>
+        <ImageButton
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:onClick="onClick"
+            android:src="@mipmap/ic_search"/>
+    </RelativeLayout>
+
+    <fragment
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:layout_marginTop="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+    <RelativeLayout
+        android:id="@+id/second_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/hospital_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_hospital"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/police_nearby"
+            android:onClick="onClick"/>
+        <ImageButton
+            android:id="@+id/police_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_police"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"/>
+        <ImageButton
+            android:id="@+id/grocery_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_grocery"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/police_nearby"
+            android:onClick="onClick"/>
+        <ImageButton
+            android:id="@+id/help_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_help"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:onClick="onClick"/>
+    </RelativeLayout>
+
+</RelativeLayout>
